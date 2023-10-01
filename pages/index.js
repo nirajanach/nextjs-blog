@@ -4,6 +4,14 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
+import List from "@mui/joy/List";
+import ListItem from "@mui/joy/ListItem";
+import ListItemButton from "@mui/joy/ListItemButton";
+import ListItemContent from "@mui/joy/ListItemContent";
+
+
+
+
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -29,7 +37,47 @@ export default function Home({ allPostsData }) {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+
+      {allPostsData.map(({ id, date, title }) => (
+        <List >
+          <ListItem key={id}>
+            <ListItemButton color="primary" variant="outlined">
+              <ListItemContent>
+                <Link href={`/posts/${id}`}>{title}</Link>
+                <br />
+                <small>
+                  <Date dateString={date} />
+                </small>
+                <br />
+              </ListItemContent>
+            </ListItemButton>
+          </ListItem>
+        </List>
+      ))}
+
+      {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <List className={utilStyles.list}>
+          {allPostsData.map(({ id, date, title }) => (
+            <ListItem className={utilStyles.listItem} key={id}>
+              <Link href={`/posts/${id}`}>{title}</Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
+              <br />
+            </ListItem>
+          ))}
+        </List>
+      </section> */}
+    </Layout>
+  );
+}
+
+
+
+
+{/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -38,14 +86,9 @@ export default function Home({ allPostsData }) {
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
-              </small>             
-              <br />              
+              </small>
+              <br />
             </li>
           ))}
         </ul>
-      </section>
-    </Layout>
-  );
-}
-
-
+      </section> */}
