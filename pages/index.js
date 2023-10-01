@@ -37,39 +37,36 @@ export default function Home({ allPostsData }) {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
-
-      {allPostsData.map(({ id, date, title }) => (
-        <List >
-          <ListItem key={id}>
-            <ListItemButton color="primary" variant="outlined">
-              <ListItemContent>
-                <Link href={`/posts/${id}`}>{title}</Link>
-                <br />
-                <small>
-                  <Date dateString={date} />
-                </small>
-                <br />
-              </ListItemContent>
-            </ListItemButton>
-          </ListItem>
-        </List>
-      ))}
-
-      {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section>
         <h2 className={utilStyles.headingLg}>Blog</h2>
-        <List className={utilStyles.list}>
+        <List>
           {allPostsData.map(({ id, date, title }) => (
-            <ListItem className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-              <br />
-            </ListItem>
+            <Link href={`/posts/${id}`} key={id}>
+              <ListItem >
+                <ListItemButton
+                  style={{
+                    borderRadius: "10px",
+                    padding: "10px",
+                    margin: "3px",
+                    
+                  }}
+                  color="primary"
+                  variant="outlined"
+                >
+                  <ListItemContent>
+                    {title}
+                    <br />
+                    <small>
+                      <Date dateString={date} />
+                    </small>
+                    <br />
+                  </ListItemContent>
+                </ListItemButton>
+              </ListItem>
+            </Link>
           ))}
         </List>
-      </section> */}
+      </section>
     </Layout>
   );
 }
