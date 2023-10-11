@@ -1,0 +1,146 @@
+.st0 {
+    fill: #bb0d48;
+}
+
+.st1 {
+    fill: #5cb8cd;
+}
+
+.st2 {
+    fill: #00aabc;
+}
+
+.st3 {
+    fill: #152d39;
+}
+
+.st4 {
+    fill: #fb8a52;
+}
+
+.st5 {
+    fill: #f77237;
+}
+
+.st6 {
+    fill: #071c23;
+}
+
+.st7 {
+    fill: #960c41;
+}
+
+.st8 {
+    fill: #dee2e2;
+}
+
+.container{
+    padding: 0.75rem;
+    width: 100%;        
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+body.button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+#svgContainer {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add your CSS styles here */
+/* Animation for spinning */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply the spinning animation to the SVG element when the 'play' class is added */
+.play {
+    animation: spin 10s linear infinite;
+}
+
+/* CSS animations for sliding */
+.slideLeft {
+    animation: slideLeft 1s forwards;
+}
+
+.slideRight {
+    animation: slideRight 1s forwards;
+}
+
+.slideUp {
+    animation: slideUp 1s forwards;
+}
+
+.slideDown {
+    animation: slideDown 1s forwards;
+}
+
+/* #svgContainer {
+    max-width: 25%;
+    /* Set a maximum width as a percentage of its container */
+   /* height: auto;
+    /* Allow the height to adjust automatically */
+   /* } */
+
+
+
+
+/* Define slide animations for each direction */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-30%);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-150%);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(150%);
+    }
+}

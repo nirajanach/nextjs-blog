@@ -8,6 +8,7 @@ import List from "@mui/joy/List";
 import ListItem from "@mui/joy/ListItem";
 import ListItemButton from "@mui/joy/ListItemButton";
 import ListItemContent from "@mui/joy/ListItemContent";
+import Flower from "../components/flower";
 
 
 
@@ -37,18 +38,22 @@ export default function Home({ allPostsData }) {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
+      <Link href="/flower">
+        Go to Flower Page
+      </Link>
+
+      <Flower />
       <section>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <List>
           {allPostsData.map(({ id, date, title }) => (
             <Link href={`/posts/${id}`} key={id}>
-              <ListItem >
+              <ListItem>
                 <ListItemButton
                   style={{
                     borderRadius: "10px",
                     padding: "10px",
                     margin: "3px",
-                    
                   }}
                   color="primary"
                   variant="outlined"
