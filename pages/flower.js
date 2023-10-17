@@ -1,4 +1,4 @@
-import Flower from "../components/flower";
+import Flower from "../components/flower/Flower";
 import Layout from "../components/layout";
 
 

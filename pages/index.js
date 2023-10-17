@@ -8,7 +8,7 @@ import List from "@mui/joy/List";
 import ListItem from "@mui/joy/ListItem";
 import ListItemButton from "@mui/joy/ListItemButton";
 import ListItemContent from "@mui/joy/ListItemContent";
-import Flower from "../components/flower";
+import Flower from "../components/flower/Flower";
 
 
 

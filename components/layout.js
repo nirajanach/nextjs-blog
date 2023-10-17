@@ -14,6 +14,13 @@ export default function Layout({ children,home  }) {
       {/* {children} */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        {/* Add the CSS link for the "Josefin Sans" font */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"
+          rel="stylesheet"
+        />
         <meta
           name="desciption"
           content="Learn how to buiild a personal website using Next.js"
