@@ -101,12 +101,12 @@ export default function Flower() {
 
   return (
     <div className={styles.container}>
+      <FlowerSVG />
       <div className="button-container">
         <PlayButton />
         <PauseButton />
-        <ResetButton />        
+        <ResetButton />
       </div>
-      <FlowerSVG />
     </div>
   );
 }

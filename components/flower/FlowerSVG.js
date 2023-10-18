@@ -50,7 +50,6 @@ function FlowerSVG({
             // style={{ fill: "#152D39" }}
           />
 
-          <a href="https://google.com" id="blogLink">
             {/* Update style attribute */}
             <path
               className={styles.outTop}
@@ -66,7 +65,6 @@ function FlowerSVG({
               id="innerTopLeafLayer"
               //   style={{ fill: "#F77237" }}
             />
-          </a>
 
           {/* Update style attribute */}
           <path
@@ -89,7 +87,6 @@ function FlowerSVG({
           style={{}}
           transform="matrix(1, 0, 0, 1.027239, -8.818818, -4.793361)"
         >
-          <a href="https://google.com">
             <text
               className={styles.commonText}
               id="topLeafText"
@@ -99,7 +96,6 @@ function FlowerSVG({
             >
               Home
             </text>
-          </a>
           <text
             className={styles.commonText}
             id="rightLeafText"
@@ -120,7 +116,7 @@ function FlowerSVG({
           </text>
           <text
             id="bottomLeafText"
-            className={styles.commonText}
+            className={styles.commonText}            
             transform="matrix(1.370335, 0, 0, 1.445508, 217.440262, 423.759796)"
             dx="-4.505"
             dy="-1.192"

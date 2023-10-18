@@ -42,11 +42,15 @@ export default function Layout({ children,home  }) {
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
+              height={96}
+              width={96}
+              alt="Profile-Image"
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h2 className={utilStyles.headingLg}>
+              <Link href="/" className={utilStyles.colorInherits}>
+                {name}
+              </Link>
+            </h2>
           </>
         ) : (
           <>
