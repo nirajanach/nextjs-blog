@@ -14,6 +14,13 @@ export default function Layout({ children,home  }) {
       {/* {children} */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        {/* Add the CSS link for the "Josefin Sans" font */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"
+          rel="stylesheet"
+        />
         <meta
           name="desciption"
           content="Learn how to buiild a personal website using Next.js"
@@ -35,11 +42,15 @@ export default function Layout({ children,home  }) {
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
+              height={96}
+              width={96}
+              alt="Profile-Image"
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h2 className={utilStyles.headingLg}>
+              <Link href="/" className={utilStyles.colorInherits}>
+                {name}
+              </Link>
+            </h2>
           </>
         ) : (
           <>
@@ -62,11 +73,11 @@ export default function Layout({ children,home  }) {
         )}
       </header>
       <main>{children}</main>
-      {!home && (
+      {/* {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
