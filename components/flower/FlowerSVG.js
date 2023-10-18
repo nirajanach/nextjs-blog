@@ -3,14 +3,8 @@ import React from "react";
 import styles from "../../styles/flower.module.css";
 
 function FlowerSVG({ 
-  isPlaying,
-  playAnimation,
-  pauseAnimation,
-  resetAnimation,
-  slideLeft,
-  slideRight,
-  slideUp,
-  slideDown, }) {
+  isPlaying
+  }) {
   const svgClassName = isPlaying ? styles.play : "";
   
 

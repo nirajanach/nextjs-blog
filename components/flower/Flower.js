@@ -24,7 +24,6 @@ export default function Flower() {
     const playButton = document.getElementById("playButton");
     const pauseButton = document.getElementById("pauseButton");
     const resetButton = document.getElementById("resetButton");   
-    const righttLeafText = document.getElementById("rightLeafText");
 
     // Function to play the animation
     function playAnimation() {
@@ -89,8 +88,12 @@ export default function Flower() {
       if (resetButton) {
         resetButton.removeEventListener("click", resetAnimation);
       }
-      cleanupFunctions.forEach((cleanup) => cleanup());
- 
+      // Execute cleanup functions if they are defined
+      cleanupFunctions.forEach((cleanup) => {
+        if (typeof cleanup === "function") {
+          cleanup();
+        }
+      });
     };
   }, []);
 
@@ -101,11 +104,7 @@ export default function Flower() {
       <div className="button-container">
         <PlayButton />
         <PauseButton />
-        <ResetButton />
-        <SlideButton direction="Left" />
-        <SlideButton direction="Right" />
-        <SlideButton direction="Up" />
-        <SlideButton direction="Down" />
+        <ResetButton />        
       </div>
       <FlowerSVG />
     </div>

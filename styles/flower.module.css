@@ -75,9 +75,9 @@
 .commonText {
         font-family: 'Josefin Sans', sans-serif;
         font-size: 1.60rem;
-        white-space: pre;
+        white-space: pre;   
         fill:#DEE2E2;
-        /* Replace with your desired text color */
+       
     }
 
 
@@ -127,24 +127,20 @@ body.button {
 /* CSS animations for sliding */
 .slideLeft { 
     animation: slideLeft 2s forwards ;
-    text-orientation: initial;
 }
 
 .slideRight {
-    animation: slideRight 1s forwards;
+    animation: slideRight 2s forwards;
 }
 
 .slideUp {
-    animation: slideUp 1s forwards;
+    animation: slideUp 2s forwards;
 }
 
 .slideDown {
-    animation: slideDown 1s forwards;
+    animation: slideDown 2s forwards;
 }
 
-.textRotate {
-    animation: textRotate 2s forwards;
-}
 
 /* #svgContainer {
     max-width: 25%;
@@ -154,17 +150,7 @@ body.button {
    /* } */
 
 /* Define the 180-degree rotation animation */
-@keyframes textRotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+
 
 /* Define slide animations for each direction */
 @keyframes slideLeft {
@@ -172,12 +158,8 @@ body.button {
         transform:  rotate(30deg)  translateX(0);
     }
 
-50% {
-        transform: rotate(90deg) translateX(-25);
-}
-
     100% {
-        transform:  rotate(180deg)  translateX(-50vw);
+        transform:  rotate(360deg)  translateX(34.5vw);
     }
 }
 
@@ -185,31 +167,28 @@ body.button {
     0% {
         transform: rotate(30deg) translateX(0);
     }
-        50% {
-            transform: rotate(90deg) translateX(25);
-        }
-
+        
     100% {
-        transform: rotate(180deg) translateX(50vw);
+        transform: rotate(360deg) translateX(-34.5vw);
     }
 }
 
 @keyframes slideUp {
     0% {
-        transform: translateY(0);
+        transform: rotate(0deg) translateY(0);
     }
 
     100% {
-        transform: translateY(-66vh);
+        transform: rotate(360deg) translateY(-59vh);
     }
 }
 
 @keyframes slideDown {
     0% {
-        transform: translateY(0);
+        transform: rotate(0deg) translateY(0);
     }
 
     100% {
-        transform: translateY(66vh);
+        transform: rotate(360deg) translateY(41vh);
     }
 }

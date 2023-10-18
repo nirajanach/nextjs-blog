@@ -63,6 +63,8 @@ img {
   display: flex;
   align-items: center;
   clear: both;
+  float: right;
+  position: sticky;
   /* Vertically center buttons */
 }
 
