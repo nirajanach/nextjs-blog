@@ -55,6 +55,7 @@ img {
 .button:hover {
   background-color: #008CBA;
   color: white;
+  border-radius: 18px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
@@ -63,7 +64,6 @@ img {
   display: flex;
   align-items: center;
   clear: both;
-  float: right;
   position: sticky;
   /* Vertically center buttons */
 }

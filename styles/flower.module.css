@@ -1,10 +1,4 @@
-/* .outTop {
-    fill: #854fee;
-}
 
-.inTop {
-    fill: #4d12c1;
-} */
 .outTop {
     fill: #caacb9;
 }
@@ -68,9 +62,6 @@
 .inLeft {
     fill: #071c23;
 } */
-
-
-
     
 .commonText {
         font-family: 'Josefin Sans', sans-serif;
@@ -80,44 +71,23 @@
        
     }
 
-
-.container{
-    padding: 0.75rem;
-    width: 100%;        
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 3rem auto;
+    margin: 3rem auto;
+    width: 100%;
 }
 
-body.button {
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-}
 
 #svgContainer {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
 }
 
 /* Add your CSS styles here */
-/* Animation for spinning */
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 /* Apply the spinning animation to the SVG element when the 'play' class is added */
 .play {
@@ -142,14 +112,110 @@ body.button {
 }
 
 
-/* #svgContainer {
-    max-width: 25%;
-    /* Set a maximum width as a percentage of its container */
-   /* height: auto;
-    /* Allow the height to adjust automatically */
-   /* } */
+/* Animation for spinning */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
 
-/* Define the 180-degree rotation animation */
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* For mobile screen size */
+@media only screen and (max-width: 767px) {
+
+    /* For mobile phones: */
+/* Define slide animations for each direction */
+    @keyframes slideLeft {
+        0% {
+            transform: rotate(30deg) translateX(0);
+        }
+
+        100% {
+            transform: rotate(360deg) translateX(33vw) scale(0.4);
+        }
+    }
+
+    @keyframes slideRight {
+        0% {
+            transform: rotate(30deg) translateX(0);
+        }
+
+        100% {
+            transform: rotate(360deg) translateX(-33.5vw) scale(0.4);
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: rotate(0deg) translateY(0) scale(0.9);
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(-54vh) scale(0.4);
+        }
+    }
+
+    @keyframes slideDown {
+        0% {
+            transform: rotate(0deg) translateY(0) scale(0.9);
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(27.5vh) scale(0.4);
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For iPads and tablets: */
+    /* Define slide animations for each direction */
+    @keyframes slideLeft {
+        0% {
+            transform: rotate(30deg) translateX(0);
+        }
+
+        100% {
+            transform: rotate(360deg) translateX(27vw) scale(0.5);
+        }
+    }
+
+    @keyframes slideRight {
+        0% {
+            transform: rotate(30deg) translateX(0);
+        }
+
+        100% {
+            transform: rotate(360deg) translateX(-27vw) scale(0.5);
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: rotate(0deg) translateY(0) scale(0.9);
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(54vh) scale(0.4);
+        }
+    }
+
+    @keyframes slideDown {
+        0% {
+            transform: rotate(0deg) translateY(0) scale(0.9);
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(-27.5vh) scale(0.4);
+        }
+    }
+}
+
+/* For Desktop screen size */
+
+@media only screen and (min-width: 1280px){
 
 
 /* Define slide animations for each direction */
@@ -159,17 +225,17 @@ body.button {
     }
 
     100% {
-        transform:  rotate(360deg)  translateX(34.5vw);
+        transform:  rotate(360deg)  translateX(34.5vw) scale(0.7);
     }
 }
 
 @keyframes slideRight {
     0% {
-        transform: rotate(30deg) translateX(0);
+        transform: rotate(30deg) translateX(0) ;
     }
         
     100% {
-        transform: rotate(360deg) translateX(-34.5vw);
+        transform: rotate(360deg) translateX(-34.5vw) scale(0.7);
     }
 }
 
@@ -179,7 +245,7 @@ body.button {
     }
 
     100% {
-        transform: rotate(360deg) translateY(-59vh);
+        transform: rotate(360deg) translateY(47vh) scale(0.7);
     }
 }
 
@@ -189,6 +255,7 @@ body.button {
     }
 
     100% {
-        transform: rotate(360deg) translateY(41vh);
+        transform: rotate(360deg) translateY(-47vh) scale(0.7);
     }
+}
 }
