@@ -9,7 +9,7 @@ import utilStyles from '../../styles/utils.module.css';
 export default function Post({ postData }) {
     return (
          <Layout>
-         {/*Add this <Head>  tah */}
+         {/*Add this <Head>  tab */}
          <Head>
             <title>{postData.id}</title>
          </Head>

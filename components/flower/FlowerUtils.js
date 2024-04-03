@@ -52,6 +52,21 @@ export function handleSlide(direction, svgElement, styles) {
     },
     Up: {
       slideClass: "slideUp",
+      showIds: ["outerTopLeafLayer", "innerTopLeafLayer", "topLeafText"],
+      hideIds: [
+        "outerBottomLeafLayer",
+        "innerBottemLeafLayer",
+        "outerLeftLeafLayer",
+        "innerLeftLeafLayer",
+        "outerRightLeafLayer",
+        "innerRightLeafLayer",
+        "leftLeafText",
+        "rightLeafText",
+        "bottomLeafText",
+      ],
+    },
+    Down: {
+      slideClass: "slideDown",
       showIds: [
         "outerBottomLeafLayer",
         "innerBottemLeafLayer",
@@ -68,22 +83,8 @@ export function handleSlide(direction, svgElement, styles) {
         "rightLeafText",
         "topLeafText",
       ],
-    },
-    Down: {
-      slideClass: "slideDown",
-      showIds: ["outerTopLeafLayer", "innerTopLeafLayer", "topLeafText"],
-      hideIds: [
-        "outerBottomLeafLayer",
-        "innerBottemLeafLayer",
-        "outerLeftLeafLayer",
-        "innerLeftLeafLayer",
-        "outerRightLeafLayer",
-        "innerRightLeafLayer",
-        "leftLeafText",
-        "rightLeafText",
-        "bottomLeafText",
-      ],
-    },
+    }
+    
   };
 
   const slideInfo = slideAnimations[direction];
