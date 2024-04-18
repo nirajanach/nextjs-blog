@@ -4,23 +4,15 @@ import styles from  "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-
 const name = 'Nirajan Acharya';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Portfolio';
 
-export default function Layout({ children,home  }) {
+export default function Layout({ children  }) {
   return (
     <div className={styles.container}>
       {/* {children} */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        {/* Add the CSS link for the "Josefin Sans" font */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap"
-          rel="stylesheet"
-        />
         <meta
           name="desciption"
           content="Learn how to buiild a personal website using Next.js"
@@ -34,10 +26,22 @@ export default function Layout({ children,home  }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+    
+
 
       <header className={styles.header}>
-        {home ? (
-          <>
+         <>
+
+          <div  className={styles.navButtonGroup}>               
+                <button type="button" id="slideUpButton">Home</button>
+                <button type="button" id="slideLeftButton">Skills</button>
+                <button type="button" id="slideDownButton">About</button>
+                <button type="button" id="slideRightButton">Contact</button>
+                <button type="button" id="resetButton">Reset</button>
+
+            </div>
+
+            {/* <div className={styles.introduction}>
             <Image
               priority
               src="/images/profile.jpg"
@@ -46,38 +50,17 @@ export default function Layout({ children,home  }) {
               width={96}
               alt="Profile-Image"
             />
+           
+            <div className={styles.nameAndPosition}>
             <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherits}>
-                {name}
-              </Link>
+            {name}
             </h2>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherits}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
+            <p className={utilStyles.subHeading}>Software Developer</p>
+            </div>
+            </div> */}
+          </>    
       </header>
-      <main>{children}</main>
-      {/* {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )} */}
+      <main>{children}</main>    
     </div>
   );
 }

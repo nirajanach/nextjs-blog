@@ -12,12 +12,14 @@
     "date-fns": "^2.30.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
+    "kute.js": "^2.2.4",
     "latest": "^0.2.0",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "tailwindcss": "^3.4.3"
   },
   "engines": {
     "node": ">=18"

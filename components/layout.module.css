@@ -1,8 +1,6 @@
 .container {
-    max-width: 100%;
-    width: 100vh;
     padding: 0 1rem;
-    margin: 3rem auto 3rem;
+    margin:  1rem auto ;
 }
 
 .header {
@@ -11,6 +9,27 @@
     align-items: center;
 }
 
-.backToHome {
-    margin: 3rem 0 0;
+.introduction{
+    display: flow;
+}
+
+.navButtonGroup{
+display: flex;
+}
+
+.nameAndPosition{
+    display: flow;
+}
+
+/* Mobile Screen size */
+@media only screen and (min-width: 760px) {
+   
+    .introduction{
+        display: flex;
+    width: 90%;
+
+    }
+
+   
+
 }

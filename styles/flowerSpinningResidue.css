@@ -1,0 +1,200 @@
+
+/* .outTop {
+    fill: #F0CF97;
+}
+
+.inTop {
+    fill: #f77237;
+}
+.outRight {
+    fill: #bb0d48;
+}
+
+.inRight {
+    fill: #960c41;
+}
+.outBottom {
+    fill: #5cb8cd;
+}
+
+.inBottom {
+    fill: #00aabc;
+}
+
+.outLeft {
+    fill: #152d39;
+}
+.inLeft {
+    fill: #071c23;
+} */
+   
+
+.play {
+    animation: spin 10s linear infinite;
+}
+
+/* CSS animations for sliding */
+.slideLeft { 
+    animation: slideLeft 2s forwards ;
+}
+
+.slideRight {
+    animation: slideRight 2s forwards;
+}
+
+.slideUp {
+    animation: slideUp 2s forwards;
+}
+
+.slideDown {
+    animation: slideDown 2s forwards;
+}
+
+
+/* Animation for spinning */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* For mobile screen size */
+@media only screen and (max-width: 767px) {
+
+    /* For mobile phones: */
+/* Define slide animations for each direction */
+    @keyframes slideLeft {
+        0% {
+            transform: rotate(30deg) translateX(0);
+        }
+
+        100% {
+            transform: rotate(360deg) translateX(33vw) scale(0.4);
+        }
+    }
+
+    @keyframes slideRight {
+        0% {
+            transform: rotate(30deg) translateX(0);
+        }
+
+        100% {
+            transform: rotate(360deg) translateX(-33.5vw) scale(0.4);
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: rotate(0deg) translateY(0) scale(0.9);
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(-54vh) scale(0.4);
+        }
+    }
+
+    @keyframes slideDown {
+        0% {
+            transform: rotate(0deg) translateY(0) scale(0.9); 
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(27.5vh) scale(0.4);
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For iPads and tablets: */
+    /* Define slide animations for each direction */
+    @keyframes slideLeft {
+        0% {
+            transform: rotate(30deg) translateX(0);
+        }
+
+        100% {
+            transform: rotate(360deg) translateX(27vw) scale(0.5);
+        }
+    }
+
+    @keyframes slideRight {
+        0% {
+            transform: rotate(30deg) translateX(0);
+        }
+
+        100% {
+            transform: rotate(360deg) translateX(-27vw) scale(0.5);
+        }
+    }
+
+    @keyframes slideDown {
+        0% {
+            transform: rotate(0deg) translateY(0) scale(0.9);
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(54vh) scale(0.4);
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: rotate(0deg) translateY(0) scale(0.9);
+        }
+
+        100% {
+            transform: rotate(360deg) translateY(-27.5vh) scale(0.4);
+        }
+    }
+}
+
+/* For Desktop screen size */
+
+@media only screen and (min-width: 1280px){
+
+
+/* Define slide animations for each direction */
+@keyframes slideLeft {
+    0% {
+        transform:  rotate(30deg)  translateX(0);
+    }
+
+    100% {
+        transform:  rotate(360deg)  translateX(34.5vw) scale(0.7);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: rotate(30deg) translateX(0) ;
+    }
+        
+    100% {
+        transform: rotate(360deg) translateX(-34.5vw) scale(0.7);
+    }
+}
+
+@keyframes  slideDown {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(47vh) scale(0.7);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(-47vh) scale(0.7);
+    }
+}
+}

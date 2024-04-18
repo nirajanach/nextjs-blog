@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import KUTE from 'kute.js'
+
 import styles from "../../styles/flower.module.css";
 import FlowerSVG from "./FlowerSVG";
 import PlayButton from "../Buttons/PlayButton";
@@ -24,6 +26,11 @@ export default function Flower() {
     const playButton = document.getElementById("playButton");
     const pauseButton = document.getElementById("pauseButton");
     const resetButton = document.getElementById("resetButton");   
+
+
+
+    var myTween = KUTE.to(playButton, {translateX:150}).start();
+
 
     // Function to play the animation
     function playAnimation() {

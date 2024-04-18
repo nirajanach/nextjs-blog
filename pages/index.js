@@ -8,7 +8,7 @@ import List from "@mui/joy/List";
 import ListItem from "@mui/joy/ListItem";
 import ListItemButton from "@mui/joy/ListItemButton";
 import ListItemContent from "@mui/joy/ListItemContent";
-import Flower from "../components/flower/Flower";
+import Flower from "../components/flower/backup/flowerKute-originFixedtest";
 
 
 export async function getStaticProps() {
@@ -25,9 +25,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section >
-        <p className={utilStyles.center}>Software Developer</p>
-      </section>
+    
       {/* <Link href="/flower">
         Go to Flower Page
       </Link> */}
