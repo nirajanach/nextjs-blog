@@ -34,10 +34,12 @@ export default function Layout({ children  }) {
 
           <div  className={styles.navButtonGroup}>               
                 <button type="button" id="slideUpButton">Home</button>
-                <button type="button" id="slideLeftButton">Skills</button>
+                <button type="button" id="slideLeftButton">Contact</button>
                 <button type="button" id="slideDownButton">About</button>
-                <button type="button" id="slideRightButton">Contact</button>
+                <button type="button" id="slideRightButton">Skills</button>
                 <button type="button" id="resetButton">Reset</button>
+                <button type="button" id="playButton">Play</button>
+                <button type="button" id="pauseButton">Pause</button>
 
             </div>
 
